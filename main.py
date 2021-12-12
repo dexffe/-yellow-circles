@@ -50,11 +50,10 @@ class Example(QMainWindow, Ui_MainWindow):
             self.draw = False
 
     def run(self, painter):
-        color = random.choice([Qt.red, Qt.blue, Qt.green, Qt.yellow, Qt.black])
         self.size = random.randint(10, 200)
         self.x = random.randint(0, self.width() - self.size)
         self.y = random.randint(0, self.height() - self.size)
-        painter.setBrush(QBrush(color, Qt.SolidPattern))
+        painter.setBrush(QBrush(Qt.yellow, Qt.SolidPattern))
         painter.drawEllipse(self.x, self.y, self.size, self.size)
 
     def qwe(self):
